@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
+<script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
+
+<!-- 播放器容器 -->
+<div id="aplayer" style="height: 300px;"></div>
+
+<script>
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    istFolded: false,
+    listMaxHeight: 300,
+    audio: {{ .Site.Params.playlist | jsonify | safeJS }},
+    theme: '#1db954'      // 主题色
+});
+</script>
+
+<style>
+/* 播放器封面大小 */
+.aplayer-pic {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+/* 歌名与歌手字体大小 */
+.aplayer-title,
+.aplayer-author {
+  font-size: 1.1rem !important;
+}
+
+/* 播放列表高度可滚动 */
+.aplayer-list {
+  max-height: 300px !important;
+}
+
+/* 播放器整体高度 */
+.aplayer {
+  height: 300px !important;
+}
+</style>

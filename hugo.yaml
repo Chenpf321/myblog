@@ -1,0 +1,77 @@
+baseURL: "https://Perphy.top:8443/"
+title: "Perphy Blog"
+languageCode: "zh-cn"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+pagination:
+  pagerSize: 10
+
+sitemap:
+  changefreq: "weekly"
+  priority: 0.5
+  filename: "sitemap.xml"
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+
+params:
+  env: "production"
+  title: "My Blog"
+  description: "Tech Blog"
+  keywords:
+    - "blog"
+    - "tech"
+  author: "Perphy"
+
+  # PaperMod 核心特性
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowBreadCrumbs: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  defaultTheme: "auto"
+
+  # 全站播放列表
+  playlist:
+    - name: "最美的期待"
+      artist: "周笔畅"
+      url: "/music/周笔畅-最美的期待.mp3"
+      cover: "/music/周笔畅-最美的期待.jpg"
+    - name: "WeAreTheYouth"
+      artist: "Electric Youth"
+      url: "/music/Electric Youth-WeAreTheYouth.mp3"
+      cover: "/music/Electric Youth-WeAreTheYouth.jpg"
+
+menu:
+  main:
+    - identifier: "posts"
+      name: "Posts"
+      url: "/posts/"
+      weight: 10
+    - identifier: "tags"
+      name: "Tags"
+      url: "/tags/"
+      weight: 20
+    - identifier: "archives"
+      name: "Archives"
+      url: "/archives/"
+      weight: 30
+    - identifier: "search"
+      name: "Search"
+      url: "/search/"
+      weight: 40
+
+markup:
+  highlight:
+    style: "github"
+    lineNos: true
+    codeFences: true
