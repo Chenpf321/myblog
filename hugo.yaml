@@ -71,6 +71,9 @@ menu:
       weight: 40
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     style: "github"
     lineNos: true

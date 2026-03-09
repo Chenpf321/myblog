@@ -30,8 +30,14 @@ height: 300px !important;
 }
 &lt;/style&gt;
 &lt;h2 id="动画效果示例"&gt;动画效果示例&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div class="fade-up"&gt;
+这里是第一段带淡入动画的内容。
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class="fade-up"&gt;
+这里是第二段带淡入动画的内容。
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
 &lt;h3 id="代码示例"&gt;代码示例&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
