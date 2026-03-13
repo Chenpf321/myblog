@@ -35,7 +35,7 @@ params:
   ShowShareButtons: false
   ShowPostNavLinks: false
   ShowCodeCopyButtons: false
-  ShowBreadCrumbs: false
+  ShowBreadCrumbs: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: false
   defaultTheme: "auto"

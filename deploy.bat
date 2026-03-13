@@ -1,6 +1,7 @@
 @echo off
 cd /d D:\Tools\hugo_extended_withdeploy\myblog
-
+:: hugo --minify done by GitHub
+:: 本地预览 hugo server -D
 :: 1检查 SSH 连接
 ssh -T git@github.com
 if %ERRORLEVEL% NEQ 1 (
