@@ -31,13 +31,13 @@ params:
   author: "Perphy"
 
   # PaperMod 核心特性
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowCodeCopyButtons: true
-  ShowBreadCrumbs: true
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowCodeCopyButtons: false
+  ShowBreadCrumbs: false
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: false
   defaultTheme: "auto"
 
   # 全站播放列表

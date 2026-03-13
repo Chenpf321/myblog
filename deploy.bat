@@ -5,7 +5,7 @@ cd /d D:\Tools\hugo_extended_withdeploy\myblog
 ssh -T git@github.com
 if %ERRORLEVEL% NEQ 1 (
     echo.
-    echo SSH failed，please check your local SSH Key added in GitHub
+    echo SSH failed, please check your local SSH Key added in GitHub
     echo ==============================
     pause
     exit /b
@@ -22,6 +22,6 @@ git push -u origin main
 
 echo.
 echo ==============================
-echo Hugo pushed，trigger GitHub Actions deploy
+echo Hugopushed, trigger GitHub Actions deploy
 echo ==============================
 pause
