@@ -7,7 +7,7 @@ ssh -T git@github.com
 if %ERRORLEVEL% NEQ 1 (
     echo.
     echo SSH failed, please check your local SSH Key added in GitHub
-    echo ==============================
+    echo ===========================================================
     pause
     exit /b
 )
@@ -22,7 +22,7 @@ git commit -m "Update Hugo project and workflow"
 git push -u origin main
 
 echo.
-echo ==============================
-echo Hugopushed, trigger GitHub Actions deploy
-echo ==============================
+echo ==========================================
+echo Hugo pushed, trigger GitHub Actions deploy
+echo ==========================================
 pause

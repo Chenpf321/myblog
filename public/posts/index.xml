@@ -1,54 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Perphy Blog</title><link>https://Perphy.top:8443/posts/</link><description>Recent content in Posts on Perphy Blog</description><generator>Hugo -- 0.153.2</generator><language>zh-cn</language><lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Perphy.top:8443/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo + PaperMod + 播放列表 + 动画效果</title><link>https://Perphy.top:8443/posts/hello-hugo/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>https://Perphy.top:8443/posts/hello-hugo/</guid><description>&lt;p&gt;欢迎来到我的博客示例文章，这是我用 &lt;strong&gt;Hugo + Caddy&lt;/strong&gt; 搭建的博客 🚀
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Perphy Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Perphy Blog</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo &#43; PaperMod &#43; 播放列表 &#43; 动画效果</title>
+      <link>http://localhost:1313/posts/hello-hugo/</link>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello-hugo/</guid>
+      <description>&lt;p&gt;欢迎来到我的博客示例文章，这是我用 &lt;strong&gt;Hugo + Caddy&lt;/strong&gt; 搭建的博客 🚀
 这篇文章展示了 &lt;strong&gt;全站播放列表&lt;/strong&gt; 和 &lt;strong&gt;Apple 官网风格动画&lt;/strong&gt;。&lt;/p&gt;
-&lt;h2 id="播放列表示例"&gt;播放列表示例&lt;/h2&gt;
-&lt;link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css"&gt;
-&lt;script src="https://unpkg.com/aplayer/dist/APlayer.min.js"&gt;&lt;/script&gt;
-&lt;div id="aplayer" style="height: 300px;"&gt;&lt;/div&gt;
+&lt;h2 id=&#34;图片示例&#34;&gt;图片示例&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;奥洛乌佩纳瀑布&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/%E5%A5%A5%E6%B4%9B%E4%B9%8C%E4%BD%A9%E7%BA%B3%E7%80%91%E5%B8%83.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;播放列表示例&#34;&gt;播放列表示例&lt;/h2&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;script src=&#34;https://unpkg.com/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;aplayer&#34; style=&#34;height: 300px;&#34;&gt;&lt;/div&gt;
+
 &lt;script&gt;
 const ap = new APlayer({
-container: document.getElementById('aplayer'),
-istFolded: false,
-listMaxHeight: 300,
-audio: [{"artist":"周笔畅","cover":"/music/周笔畅-最美的期待.jpg","name":"最美的期待","url":"/music/周笔畅-最美的期待.mp3"},{"artist":"Electric Youth","cover":"/music/Electric Youth-WeAreTheYouth.jpg","name":"WeAreTheYouth","url":"/music/Electric Youth-WeAreTheYouth.mp3"}],
-theme: '#1db954'
+    container: document.getElementById(&#39;aplayer&#39;),
+    istFolded: false,
+    listMaxHeight: 300,
+    audio: [{&#34;artist&#34;:&#34;周笔畅&#34;,&#34;cover&#34;:&#34;/music/周笔畅-最美的期待.jpg&#34;,&#34;name&#34;:&#34;最美的期待&#34;,&#34;url&#34;:&#34;/music/周笔畅-最美的期待.mp3&#34;},{&#34;artist&#34;:&#34;Electric Youth&#34;,&#34;cover&#34;:&#34;/music/Electric Youth-WeAreTheYouth.jpg&#34;,&#34;name&#34;:&#34;WeAreTheYouth&#34;,&#34;url&#34;:&#34;/music/Electric Youth-WeAreTheYouth.mp3&#34;}],
+    theme: &#39;#1db954&#39;      
 });
 &lt;/script&gt;
+
 &lt;style&gt;
+ 
 .aplayer-pic {
-width: 300px !important;
-height: 300px !important;
+  width: 300px !important;
+  height: 300px !important;
 }
+
+ 
 .aplayer-title,
 .aplayer-author {
-font-size: 1.1rem !important;
+  font-size: 1.1rem !important;
 }
+
+ 
 .aplayer-list {
-max-height: 300px !important;
+  max-height: 300px !important;
 }
+
+ 
 .aplayer {
-height: 300px !important;
+  height: 300px !important;
 }
 &lt;/style&gt;
-&lt;h2 id="动画效果示例"&gt;动画效果示例&lt;/h2&gt;
-&lt;div class="fade-up"&gt;
-这里是第一段带淡入动画的内容。
+&lt;h2 id=&#34;动画效果示例&#34;&gt;动画效果示例&lt;/h2&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第一段带淡入动画的内容。  
 可以滚动到这里时自动显示。
 &lt;/div&gt;
-&lt;div class="fade-up"&gt;
-这里是第二段带淡入动画的内容。
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第二段带淡入动画的内容。  
 同样会在滚动到可视区域时淡入。
 &lt;/div&gt;
-&lt;h3 id="代码示例"&gt;代码示例&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
+&lt;h3 id=&#34;代码示例&#34;&gt;代码示例&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;# 代码块也支持 PaperMod 高亮&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;def&lt;/span&gt; &lt;span style="color:#6639ba"&gt;hello&lt;/span&gt;&lt;span style="color:#1f2328"&gt;():&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6639ba"&gt;print&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;Hello Hugo + PaperMod!&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;)&lt;/span&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;# 代码块也支持 PaperMod 高亮&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#6639ba&#34;&gt;hello&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6639ba&#34;&gt;print&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;Hello Hugo + PaperMod!&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item></channel></rss>
+&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -38,7 +38,12 @@ params:
   ShowBreadCrumbs: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: false
+  ShowToc: true
   defaultTheme: "auto"
+  disableThemeToggle: false
+  
+  # linen, wheat, gray, light
+  color: "linen"
 
   # 全站播放列表
   playlist:
