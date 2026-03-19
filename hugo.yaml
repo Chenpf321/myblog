@@ -38,7 +38,7 @@ params:
   ShowBreadCrumbs: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: false
-  ShowToc: true
+  ShowToc: false
   defaultTheme: "auto"
   disableThemeToggle: false
   
