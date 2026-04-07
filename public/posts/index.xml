@@ -59,11 +59,51 @@ const ap = new APlayer({
 &lt;/style&gt;
 &lt;h2 id=&#34;动画效果示例&#34;&gt;动画效果示例&lt;/h2&gt;
 &lt;div class=&#34;fade-up&#34;&gt;
-这里是第一段带淡入动画的内容。  
+这里是第1段带淡入动画的内容。  
 可以滚动到这里时自动显示。
 &lt;/div&gt;
 &lt;div class=&#34;fade-up&#34;&gt;
-这里是第二段带淡入动画的内容。  
+这里是第2段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第3段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第4段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第5段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第6段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第7段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第8段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第9段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第10段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第11段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第12段带淡入动画的内容。  
 同样会在滚动到可视区域时淡入。
 &lt;/div&gt;
 &lt;h3 id=&#34;代码示例&#34;&gt;代码示例&lt;/h3&gt;
