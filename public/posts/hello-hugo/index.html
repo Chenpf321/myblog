@@ -1097,7 +1097,7 @@ def hello():
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     istFolded: false,
-    listMaxHeight: 300,
+    listMaxHeight: '40vh',
     audio: [{"artist":"周笔畅","cover":"/music/周笔畅-最美的期待.jpg","name":"最美的期待","url":"/music/周笔畅-最美的期待.mp3"},{"artist":"Electric Youth","cover":"/music/Electric Youth-WeAreTheYouth.jpg","name":"WeAreTheYouth","url":"/music/Electric Youth-WeAreTheYouth.mp3"}],
     theme: '#1db954'      
 });
@@ -1105,25 +1105,47 @@ const ap = new APlayer({
 
 <style>
  
+#aplayer {
+  width: 100%;
+  max-width: 100%;
+}
+
+ 
+.aplayer {
+  width: 100% !important;
+  height: auto !important;
+}
+
+ 
 .aplayer-pic {
-  width: 300px !important;
-  height: 300px !important;
+  width: 20vw !important;
+  height: 20vw !important;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+ 
+.aplayer-list {
+  max-height: 40vh !important;
+  overflow-y: auto;
 }
 
  
 .aplayer-title,
 .aplayer-author {
-  font-size: 1.1rem !important;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
 }
 
- 
-.aplayer-list {
-  max-height: 300px !important;
-}
+@media (max-width: 600px) {
+  .aplayer-body {
+    flex-direction: column !important;
+  }
 
- 
-.aplayer {
-  height: 300px !important;
+  .aplayer-pic {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none;
+  }
 }
 </style>
 <h2 id="动画效果示例">动画效果示例<a hidden class="anchor" aria-hidden="true" href="#动画效果示例">#</a></h2>

@@ -28,7 +28,7 @@
 const ap = new APlayer({
     container: document.getElementById(&#39;aplayer&#39;),
     istFolded: false,
-    listMaxHeight: 300,
+    listMaxHeight: &#39;40vh&#39;,
     audio: [{&#34;artist&#34;:&#34;周笔畅&#34;,&#34;cover&#34;:&#34;/music/周笔畅-最美的期待.jpg&#34;,&#34;name&#34;:&#34;最美的期待&#34;,&#34;url&#34;:&#34;/music/周笔畅-最美的期待.mp3&#34;},{&#34;artist&#34;:&#34;Electric Youth&#34;,&#34;cover&#34;:&#34;/music/Electric Youth-WeAreTheYouth.jpg&#34;,&#34;name&#34;:&#34;WeAreTheYouth&#34;,&#34;url&#34;:&#34;/music/Electric Youth-WeAreTheYouth.mp3&#34;}],
     theme: &#39;#1db954&#39;      
 });
@@ -36,25 +36,47 @@ const ap = new APlayer({
 
 &lt;style&gt;
  
+#aplayer {
+  width: 100%;
+  max-width: 100%;
+}
+
+ 
+.aplayer {
+  width: 100% !important;
+  height: auto !important;
+}
+
+ 
 .aplayer-pic {
-  width: 300px !important;
-  height: 300px !important;
+  width: 20vw !important;
+  height: 20vw !important;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+ 
+.aplayer-list {
+  max-height: 40vh !important;
+  overflow-y: auto;
 }
 
  
 .aplayer-title,
 .aplayer-author {
-  font-size: 1.1rem !important;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
 }
 
- 
-.aplayer-list {
-  max-height: 300px !important;
-}
+@media (max-width: 600px) {
+  .aplayer-body {
+    flex-direction: column !important;
+  }
 
- 
-.aplayer {
-  height: 300px !important;
+  .aplayer-pic {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none;
+  }
 }
 &lt;/style&gt;
 &lt;h2 id=&#34;动画效果示例&#34;&gt;动画效果示例&lt;/h2&gt;

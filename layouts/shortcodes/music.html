@@ -8,32 +8,54 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     istFolded: false,
-    listMaxHeight: 300,
+    listMaxHeight: '40vh',
     audio: {{ .Site.Params.playlist | jsonify | safeJS }},
     theme: '#1db954'      // 主题色
 });
 </script>
 
 <style>
-/* 播放器封面大小 */
-.aplayer-pic {
-  width: 300px !important;
-  height: 300px !important;
+/* 容器自适应 */
+#aplayer {
+  width: 100%;
+  max-width: 100%;
 }
 
-/* 歌名与歌手字体大小 */
+/* 播放器整体 */
+.aplayer {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* 封面自适应 */
+.aplayer-pic {
+  width: 20vw !important;
+  height: 20vw !important;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+/* 播放列表 */
+.aplayer-list {
+  max-height: 40vh !important;
+  overflow-y: auto;
+}
+
+/* 文字缩放 */
 .aplayer-title,
 .aplayer-author {
-  font-size: 1.1rem !important;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
 }
 
-/* 播放列表高度可滚动 */
-.aplayer-list {
-  max-height: 300px !important;
-}
+@media (max-width: 600px) {
+  .aplayer-body {
+    flex-direction: column !important;
+  }
 
-/* 播放器整体高度 */
-.aplayer {
-  height: 300px !important;
+  .aplayer-pic {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none;
+  }
 }
 </style>

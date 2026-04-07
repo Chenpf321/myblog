@@ -28,7 +28,7 @@
 const ap = new APlayer({
     container: document.getElementById(&#39;aplayer&#39;),
     istFolded: false,
-    listMaxHeight: 300,
+    listMaxHeight: &#39;40vh&#39;,
     audio: [{&#34;artist&#34;:&#34;周笔畅&#34;,&#34;cover&#34;:&#34;/music/周笔畅-最美的期待.jpg&#34;,&#34;name&#34;:&#34;最美的期待&#34;,&#34;url&#34;:&#34;/music/周笔畅-最美的期待.mp3&#34;},{&#34;artist&#34;:&#34;Electric Youth&#34;,&#34;cover&#34;:&#34;/music/Electric Youth-WeAreTheYouth.jpg&#34;,&#34;name&#34;:&#34;WeAreTheYouth&#34;,&#34;url&#34;:&#34;/music/Electric Youth-WeAreTheYouth.mp3&#34;}],
     theme: &#39;#1db954&#39;      
 });
@@ -36,25 +36,47 @@ const ap = new APlayer({
 
 &lt;style&gt;
  
+#aplayer {
+  width: 100%;
+  max-width: 100%;
+}
+
+ 
+.aplayer {
+  width: 100% !important;
+  height: auto !important;
+}
+
+ 
 .aplayer-pic {
-  width: 300px !important;
-  height: 300px !important;
+  width: 20vw !important;
+  height: 20vw !important;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+ 
+.aplayer-list {
+  max-height: 40vh !important;
+  overflow-y: auto;
 }
 
  
 .aplayer-title,
 .aplayer-author {
-  font-size: 1.1rem !important;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
 }
 
- 
-.aplayer-list {
-  max-height: 300px !important;
-}
+@media (max-width: 600px) {
+  .aplayer-body {
+    flex-direction: column !important;
+  }
 
- 
-.aplayer {
-  height: 300px !important;
+  .aplayer-pic {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none;
+  }
 }
 &lt;/style&gt;
 &lt;h2 id=&#34;动画效果示例&#34;&gt;动画效果示例&lt;/h2&gt;
@@ -104,6 +126,358 @@ const ap = new APlayer({
 &lt;/div&gt;
 &lt;div class=&#34;fade-up&#34;&gt;
 这里是第12段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第13段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第14段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第15段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第16段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第17段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第18段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第19段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第20段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第21段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第22段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第23段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第24段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第25段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第26段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第27段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第28段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第29段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第30段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第31段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第32段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第33段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第34段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第35段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第36段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第37段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第38段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第39段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第40段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第41段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第42段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第43段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第44段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第45段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第46段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第47段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第48段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第49段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第50段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第51段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第52段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第53段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第54段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第55段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第56段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第57段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第58段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第59段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第60段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第61段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第62段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第63段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第64段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第65段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第66段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第67段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第68段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第69段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第70段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第71段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第72段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第73段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第74段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第75段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第76段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第77段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第78段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第79段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第80段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第81段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第82段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第83段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第84段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第85段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第86段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第87段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第88段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第89段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第90段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第91段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第92段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第93段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第94段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第95段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第96段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第97段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第98段带淡入动画的内容。  
+同样会在滚动到可视区域时淡入。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第99段带淡入动画的内容。  
+可以滚动到这里时自动显示。
+&lt;/div&gt;
+&lt;div class=&#34;fade-up&#34;&gt;
+这里是第100段带淡入动画的内容。  
 同样会在滚动到可视区域时淡入。
 &lt;/div&gt;
 &lt;h3 id=&#34;代码示例&#34;&gt;代码示例&lt;/h3&gt;
