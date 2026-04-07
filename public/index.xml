@@ -22,7 +22,7 @@
 
 
 &lt;div id=&#34;aplayer&#34; style=&#34;height: 300px;&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;aplayer-toggle-list&#34;&gt;播放列表&lt;/div&gt;
+&lt;div class=&#34;aplayer-toggle-list&#34;&gt;点击展开或关闭播放列表&lt;/div&gt;
 
 &lt;script&gt;
 const ap = new APlayer({
