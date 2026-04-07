@@ -7,54 +7,93 @@
 <script>
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
-    istFolded: false,
-    listMaxHeight: '40vh',
+    fixed: false,
+    listFolded: false,
+    listMaxHeight: '200px',   // 列表更合理
     audio: {{ .Site.Params.playlist | jsonify | safeJS }},
-    theme: '#1db954'      // 主题色
+    theme: '#1db954'
 });
 </script>
 
 <style>
-/* 容器自适应 */
+/* ===== 通用 ===== */
 #aplayer {
   width: 100%;
-  max-width: 100%;
 }
 
-/* 播放器整体 */
 .aplayer {
   width: 100% !important;
   height: auto !important;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* 封面自适应 */
+/* 封面（PC 默认） */
 .aplayer-pic {
-  width: 20vw !important;
-  height: 20vw !important;
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px !important;
+  height: 120px !important;
+  background-size: cover !important;
+  background-position: center;
 }
 
-/* 播放列表 */
+/* 信息区 */
+.aplayer-info {
+  padding: 10px;
+}
+
+/* 列表 */
 .aplayer-list {
-  max-height: 40vh !important;
+  max-height: 300px !important;
   overflow-y: auto;
 }
 
-/* 文字缩放 */
-.aplayer-title,
-.aplayer-author {
-  font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
-}
-
+/* ===== 🎯 移动端重排 ===== */
 @media (max-width: 600px) {
+
+  /* 整体改为竖排 */
   .aplayer-body {
     flex-direction: column !important;
   }
 
+  /* 封面变大图 */
   .aplayer-pic {
     width: 100% !important;
-    aspect-ratio: 1 / 1;
+    height: 220px !important;   /* 可调：180~260 */
+    max-width: none;
+    border-radius: 8px;
+  }
+
+  /* 信息区居中 */
+  .aplayer-info {
+    text-align: center;
+    padding: 12px 8px;
+  }
+
+  /* 标题 */
+  .aplayer-title {
+    font-size: 1rem !important;
+  }
+
+  .aplayer-author {
+    font-size: 0.85rem !important;
+    opacity: 0.7;
+  }
+
+  /* 控制条居中 */
+  .aplayer-controller {
+    justify-content: center !important;
+  }
+
+  /* 进度条优化 */
+  .aplayer-bar-wrap {
+    margin: 0 10px;
+  }
+
+  /* 列表高度缩小 */
+  .aplayer-list {
+    max-height: 200px !important;
   }
 }
+
 </style>

@@ -6,7 +6,6 @@
     <description>Recent content on Perphy Blog</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo &#43; PaperMod &#43; 播放列表 &#43; 动画效果</title>
@@ -27,10 +26,11 @@
 &lt;script&gt;
 const ap = new APlayer({
     container: document.getElementById(&#39;aplayer&#39;),
-    istFolded: false,
-    listMaxHeight: &#39;40vh&#39;,
+    fixed: false,
+    listFolded: false,
+    listMaxHeight: &#39;200px&#39;,   
     audio: [{&#34;artist&#34;:&#34;周笔畅&#34;,&#34;cover&#34;:&#34;/music/周笔畅-最美的期待.jpg&#34;,&#34;name&#34;:&#34;最美的期待&#34;,&#34;url&#34;:&#34;/music/周笔畅-最美的期待.mp3&#34;},{&#34;artist&#34;:&#34;Electric Youth&#34;,&#34;cover&#34;:&#34;/music/Electric Youth-WeAreTheYouth.jpg&#34;,&#34;name&#34;:&#34;WeAreTheYouth&#34;,&#34;url&#34;:&#34;/music/Electric Youth-WeAreTheYouth.mp3&#34;}],
-    theme: &#39;#1db954&#39;      
+    theme: &#39;#1db954&#39;
 });
 &lt;/script&gt;
 
@@ -38,45 +38,83 @@ const ap = new APlayer({
  
 #aplayer {
   width: 100%;
-  max-width: 100%;
 }
 
- 
 .aplayer {
   width: 100% !important;
   height: auto !important;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
  
 .aplayer-pic {
-  width: 20vw !important;
-  height: 20vw !important;
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px !important;
+  height: 120px !important;
+  background-size: cover !important;
+  background-position: center;
+}
+
+ 
+.aplayer-info {
+  padding: 10px;
 }
 
  
 .aplayer-list {
-  max-height: 40vh !important;
+  max-height: 300px !important;
   overflow-y: auto;
 }
 
  
-.aplayer-title,
-.aplayer-author {
-  font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
-}
-
 @media (max-width: 600px) {
+
+   
   .aplayer-body {
     flex-direction: column !important;
   }
 
+   
   .aplayer-pic {
     width: 100% !important;
-    aspect-ratio: 1 / 1;
+    height: 220px !important;    
+    max-width: none;
+    border-radius: 8px;
+  }
+
+   
+  .aplayer-info {
+    text-align: center;
+    padding: 12px 8px;
+  }
+
+   
+  .aplayer-title {
+    font-size: 1rem !important;
+  }
+
+  .aplayer-author {
+    font-size: 0.85rem !important;
+    opacity: 0.7;
+  }
+
+   
+  .aplayer-controller {
+    justify-content: center !important;
+  }
+
+   
+  .aplayer-bar-wrap {
+    margin: 0 10px;
+  }
+
+   
+  .aplayer-list {
+    max-height: 200px !important;
   }
 }
+
 &lt;/style&gt;
 &lt;h2 id=&#34;动画效果示例&#34;&gt;动画效果示例&lt;/h2&gt;
 &lt;div class=&#34;fade-up&#34;&gt;
