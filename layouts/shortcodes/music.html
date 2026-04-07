@@ -3,6 +3,7 @@
 
 <!-- 播放器容器 -->
 <div id="aplayer" style="height: 300px;"></div>
+<div class="aplayer-toggle-list">播放列表</div>
 
 <script>
 const ap = new APlayer({
@@ -12,6 +13,18 @@ const ap = new APlayer({
     listMaxHeight: '200px',   // 列表更合理
     audio: {{ .Site.Params.playlist | jsonify | safeJS }},
     theme: '#1db954'
+});
+const toggleBtn = document.querySelector('.aplayer-toggle-list');
+const list = document.querySelector('.aplayer-list');
+
+toggleBtn.addEventListener('click', () => {
+    list.classList.toggle('show');
+});
+
+document.addEventListener('click', (e) => {
+    if (!list.contains(e.target) && !toggleBtn.contains(e.target)) {
+        list.classList.remove('show');
+    }
 });
 </script>
 
@@ -93,6 +106,42 @@ const ap = new APlayer({
   /* 列表高度缩小 */
   .aplayer-list {
     max-height: 200px !important;
+  }
+}
+
+/* ===== 移动端抽屉列表 ===== */
+@media (max-width: 600px) {
+
+  /* 列表变成抽屉 */
+  .aplayer-list {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+
+    background: var(--theme, #fff);
+    z-index: 999;
+
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+
+    overflow-y: auto;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  }
+
+  /* 打开状态 */
+  .aplayer-list.show {
+    transform: translateY(0);
+  }
+
+  /* 按钮样式 */
+  .aplayer-toggle-list {
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0.7;
   }
 }
 

@@ -22,6 +22,7 @@
 
 
 &lt;div id=&#34;aplayer&#34; style=&#34;height: 300px;&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;aplayer-toggle-list&#34;&gt;播放列表&lt;/div&gt;
 
 &lt;script&gt;
 const ap = new APlayer({
@@ -31,6 +32,18 @@ const ap = new APlayer({
     listMaxHeight: &#39;200px&#39;,   
     audio: [{&#34;artist&#34;:&#34;周笔畅&#34;,&#34;cover&#34;:&#34;/music/周笔畅-最美的期待.jpg&#34;,&#34;name&#34;:&#34;最美的期待&#34;,&#34;url&#34;:&#34;/music/周笔畅-最美的期待.mp3&#34;},{&#34;artist&#34;:&#34;Electric Youth&#34;,&#34;cover&#34;:&#34;/music/Electric Youth-WeAreTheYouth.jpg&#34;,&#34;name&#34;:&#34;WeAreTheYouth&#34;,&#34;url&#34;:&#34;/music/Electric Youth-WeAreTheYouth.mp3&#34;}],
     theme: &#39;#1db954&#39;
+});
+const toggleBtn = document.querySelector(&#39;.aplayer-toggle-list&#39;);
+const list = document.querySelector(&#39;.aplayer-list&#39;);
+
+toggleBtn.addEventListener(&#39;click&#39;, () =&gt; {
+    list.classList.toggle(&#39;show&#39;);
+});
+
+document.addEventListener(&#39;click&#39;, (e) =&gt; {
+    if (!list.contains(e.target) &amp;&amp; !toggleBtn.contains(e.target)) {
+        list.classList.remove(&#39;show&#39;);
+    }
 });
 &lt;/script&gt;
 
@@ -112,6 +125,42 @@ const ap = new APlayer({
    
   .aplayer-list {
     max-height: 200px !important;
+  }
+}
+
+ 
+@media (max-width: 600px) {
+
+   
+  .aplayer-list {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+
+    background: var(--theme, #fff);
+    z-index: 999;
+
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+
+    overflow-y: auto;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  }
+
+   
+  .aplayer-list.show {
+    transform: translateY(0);
+  }
+
+   
+  .aplayer-toggle-list {
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0.7;
   }
 }
 
