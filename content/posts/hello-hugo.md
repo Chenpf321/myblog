@@ -9,6 +9,7 @@ draft: false
 
 ## 图片示例
 ![奥洛乌佩纳瀑布](/images/奥洛乌佩纳瀑布.jpg)
+![GTA6_ULTIMATE_EDITION_VAPID_BUGGY](/images/GTA6_ULTIMATE_EDITION_VAPID_BUGGY.avif)
 
 ## 播放列表示例
 
