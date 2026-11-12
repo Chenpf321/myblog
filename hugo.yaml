@@ -47,6 +47,10 @@ params:
 
   # 全站播放列表
   playlist:
+    - name: "Like Icarus We Fly"
+      artist: "Johan Glössner,Frida Winsth"
+      url: "/music/Johan Glössner,Frida Winsth - Like Icarus We Fly.mp3"
+      cover: "/music/Johan Glössner,Frida Winsth - Like Icarus We Fly.jpg"
     - name: "最美的期待"
       artist: "周笔畅"
       url: "/music/周笔畅-最美的期待.mp3"

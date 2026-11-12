@@ -1,6 +1,6 @@
 ---
 title: "Hugo + PaperMod + 播放列表 + 动画效果"
-date: 2026-03-19
+date: 2026-11-12
 draft: false
 ---
 
